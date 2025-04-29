@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="hr_plus.DateRangeWidget" owl="1">
+       
+        <t t-if="props.readonly">
+            <span class="badge badge-warning o_date_text" style="font-size: 12px;"><t t-esc="formattedValue" /></span>
+            
+        </t>
+
+        <div t-else="" class="o_date_range" style="width: 125px;">
+           
+
+            <input type="date" class="start-date o_input" t-att-value="startDate" t-on-change="_onStartDateChange" placeholder="Start Date"/>
+            <span class="mx-2"> ~ </span>
+            <input type="date" class="end-date o_input" t-att-value="endDate" t-on-change="_onEndDateChange"  placeholder="End Date"/>
+        </div>
+    </t>
+</templates>
